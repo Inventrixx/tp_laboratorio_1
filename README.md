@@ -1,8 +1,6 @@
 # TP N°1: Calculadora
 
-## Alumna: Bárbara Del Vitto
-
-## División: 1E
+## Alumna: Bárbara Del Vitto, División: 1E
 
 # Enunciado
 
