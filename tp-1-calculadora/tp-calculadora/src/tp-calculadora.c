@@ -33,8 +33,9 @@ int main()
 
 
     while (seguir == 's') {
+        	printf("Bienvenid@ a la calculadora, ingrese las siguientes opciones:\n");
             printf("Los operandos son A = %.2f B = %.2f \n",num1,num2);
-            printf("1- ingresar operando A\n");
+            printf("1- Ingresar operando A\n");
             printf("2- Ingresar operando B\n");
             printf("3- Realizar operaciones \n");
             printf("4- Mostrar resultados\n");
@@ -42,7 +43,6 @@ int main()
             scanf("%d",&opcion);
 
             __fpurge(stdin);
-
 
             switch(opcion)
             {
@@ -61,7 +61,7 @@ int main()
                     flag2=1;
                 }
                 else{
-                        printf("Deberá ingresar el primer operando antes de continuar. \n");
+                       printf("Deberá ingresar el primer operando antes de continuar. \n");
                     };
                 break;
             case 3:
@@ -82,38 +82,43 @@ int main()
                 break;
             case 4:
                 if(flag3==1){
-                printf("El resultado de la suma es: %.2f\n",rSuma);
-                printf("El resultado de la resta es: %.2f\n",rResta);
+                	printf("El resultado de la suma es: %.2f\n",rSuma);
+                	printf("El resultado de la resta es: %.2f\n",rResta);
                 if(num2==0)
                 {
-                        printf("No se puede dividir por 0 \n");
+                    printf("No se puede dividir por 0 \n");
                 }
                 else
                     {
                         printf("El resultado de la division es: %.2f\n",rDivision);
                     }
-                printf("El resultado de la multiplicacion es: %.2f\n",rMultiplicacion);
-                printf("El resultado del Factorial de A es: %.2f\n",rFactorialA);
-                printf("El resultado del Factorial de B es: %.2f\n",rFactorialB);
+					printf("El resultado de la multiplicacion es: %.2f\n",rMultiplicacion);
+					printf("El resultado del Factorial de A es: %.2f\n",rFactorialA);
+					printf("El resultado del Factorial de B es: %.2f\n",rFactorialB);
                 }
                 else
                     {
                         printf("No se han realizado las operaciones");
                     }
                 break;
-
+            case 5:
+            	seguir = 'n';
+				printf("Saliendo del programa. ¡Muchas gracias y adiós!");
+				break;
+            default:
+            	printf("\t\tERROR");
+            	printf("\t\tIngrese alguna de las opciones numericas que proporciona el menu\n\n");
+            	break;
             }
             if (flag3 == 1 && opcion == 4) {
             	printf("Desea seguir operando? \n");
             	int c = getchar();
             	seguir = c;
+            	flag1 = 0;
+            	flag2 = 0;
+            	flag3 = 0;
             }
-            if(opcion==5)
-                {
-                    seguir = 'n';
-                    printf("Operacion terminada\n");
-                break;
-                }
+
 
       }
     return EXIT_SUCCESS;
