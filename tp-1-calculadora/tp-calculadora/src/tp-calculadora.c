@@ -103,7 +103,7 @@ int main()
                 break;
 
             }
-            if (flag3 == 1 && opcion == 'd') {
+            if (flag3 == 1 && opcion == 4) {
             	printf("Desea seguir operando? \n");
             	int c = getchar();
             	seguir = c;
